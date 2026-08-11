@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full flex flex-col md:flex-row justify-between items-center gap-12">
-        <div className="max-w-2xl w-full">
+        <div className="max-w-2xl lg:max-w-3xl xl:max-w-4xl w-full z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,9 +47,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-[5rem] font-light text-gray-900 leading-[1.05] mb-8 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-light text-gray-900 leading-[1.05] mb-8 tracking-tight"
           >
-            Powering tomorrow, <br />
+            <span className="xl:whitespace-nowrap">Powering tomorrow,</span> <br />
             <span className="relative inline-block mt-2">
               <span className="relative z-10 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
                 elegantly.
