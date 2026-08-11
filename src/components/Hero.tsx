@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowRight, Sun, Play, Activity } from 'lucide-react';
+import { ArrowRight, Sun, Play, Activity, Battery, Zap, ChevronRight, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -111,49 +111,151 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Floating Glassmorphic Badges */}
-        <div className="hidden lg:flex flex-col gap-6 relative right-8">
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 1.2 }}
-            className="glass p-6 rounded-3xl w-72 shadow-[0_20px_40px_rgb(0,0,0,0.06)] border-white/60 ml-12"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center border border-amber-100">
-                <Sun className="w-6 h-6 text-amber-500" />
-              </div>
-              <Activity className="w-5 h-5 text-gray-400" />
-            </div>
-            <div>
-              <p className="text-3xl font-display font-semibold text-gray-900">99.8%</p>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mt-1">Grid Uptime</p>
-            </div>
-            <p className="text-sm text-gray-500 font-light leading-relaxed mt-4 pt-4 border-t border-gray-200/50">
-              Proprietary micro-inverter tech ensuring flawless delivery.
-            </p>
-          </motion.div>
+        {/* Modern Premium Data Visualization Hub */}
+        <div className="hidden lg:block relative w-[450px]">
+          {/* Background Decorative Rings */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              className="w-[400px] h-[400px] rounded-full border border-gray-200/50 border-dashed"
+            />
+            <motion.div 
+              animate={{ rotate: -360 }}
+              transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+              className="absolute w-[280px] h-[280px] rounded-full border border-gray-200/40"
+            />
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 1.4 }}
-            className="glass p-6 rounded-3xl w-72 shadow-[0_20px_40px_rgb(0,0,0,0.06)] border-white/60 -ml-8"
-          >
-            <div className="flex items-center justify-between mb-2">
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Current Output</p>
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
+          <div className="relative z-10 h-[500px] flex flex-col justify-between py-6">
+            {/* Top Card: Efficiency */}
+            <motion.div
+              initial={{ opacity: 0, x: 50, y: -20 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 1.2, delay: 1.2 }}
+              className="glass p-5 rounded-2xl w-64 shadow-[0_20px_40px_rgb(0,0,0,0.05)] border-white/80 self-end mr-4"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center border border-amber-100">
+                  <Sun className="w-5 h-5 text-amber-500" />
+                </div>
+                <div className="flex items-center gap-1 bg-emerald-50 text-emerald-600 px-2 py-1 rounded-full text-xs font-medium border border-emerald-100">
+                  <TrendingUp className="w-3 h-3" />
+                  +2.4%
+                </div>
+              </div>
+              <p className="text-2xl font-display font-semibold text-gray-900">99.8%</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mt-1">Grid Uptime</p>
+            </motion.div>
+
+            {/* Connecting Lines and Arrows Center piece */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 1.5 }}
+                className="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center shadow-2xl z-20 border-4 border-white/50 backdrop-blur-sm relative"
+              >
+                <Zap className="w-6 h-6 text-amber-400" />
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute inset-0 rounded-full border border-amber-400"
+                />
+              </motion.div>
+
+              {/* Connecting animated paths */}
+              <svg className="absolute w-[450px] h-[500px] z-10 pointer-events-none" viewBox="0 0 450 500">
+                {/* Arrow to Top Card */}
+                <motion.path
+                  d="M225 250 L 350 120"
+                  stroke="url(#gradient1)"
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                  fill="none"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1.5, delay: 1.6 }}
+                />
+                {/* Arrow to Bottom Card */}
+                <motion.path
+                  d="M225 250 L 150 380"
+                  stroke="url(#gradient2)"
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                  fill="none"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1.5, delay: 1.8 }}
+                />
+                
+                {/* Moving dots on paths */}
+                <circle r="3" fill="#FBBF24">
+                  <animateMotion
+                    dur="2s"
+                    repeatCount="indefinite"
+                    path="M225 250 L 350 120"
+                  />
+                </circle>
+                <circle r="3" fill="#34D399">
+                  <animateMotion
+                    dur="2.5s"
+                    repeatCount="indefinite"
+                    path="M225 250 L 150 380"
+                  />
+                </circle>
+
+                <defs>
+                  <linearGradient id="gradient1" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#FBBF24" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#FBBF24" stopOpacity="0.5" />
+                  </linearGradient>
+                  <linearGradient id="gradient2" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="#34D399" stopOpacity="0" />
+                    <stop offset="100%" stopColor="#34D399" stopOpacity="0.5" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
-            <p className="text-3xl font-display font-semibold text-gray-900 mb-4">14.2 <span className="text-lg text-gray-500 font-medium">kW</span></p>
-            <div className="h-12 w-full flex items-end gap-1">
-              {[40, 70, 45, 90, 65, 85, 100].map((h, i) => (
-                <div key={i} className="flex-1 bg-gradient-to-t from-gray-900 to-gray-600 rounded-t-sm opacity-20" style={{ height: `${h}%` }}></div>
-              ))}
-            </div>
-          </motion.div>
+
+            {/* Bottom Card: Output & Storage */}
+            <motion.div
+              initial={{ opacity: 0, x: -50, y: 20 }}
+              animate={{ opacity: 1, x: 0, y: 0 }}
+              transition={{ duration: 1.2, delay: 1.4 }}
+              className="glass p-6 rounded-3xl w-72 shadow-[0_20px_40px_rgb(0,0,0,0.06)] border-white/80 self-start ml-4 mt-auto z-20"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <p className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-1">Live Output</p>
+                  <p className="text-3xl font-display font-semibold text-gray-900">14.2 <span className="text-lg text-gray-500 font-medium">kW</span></p>
+                </div>
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-gray-100 shadow-sm">
+                  <Activity className="w-5 h-5 text-gray-400" />
+                </div>
+              </div>
+              
+              <div className="h-10 w-full flex items-end gap-1 mb-4">
+                {[40, 70, 45, 90, 65, 85, 100].map((h, i) => (
+                  <motion.div 
+                    key={i} 
+                    initial={{ height: 0 }}
+                    animate={{ height: `${h}%` }}
+                    transition={{ duration: 1, delay: 1.5 + (i * 0.1) }}
+                    className="flex-1 bg-gradient-to-t from-gray-900 to-gray-500 rounded-t-sm opacity-20 hover:opacity-40 transition-opacity" 
+                  />
+                ))}
+              </div>
+
+              <div className="pt-4 border-t border-gray-200/50 flex items-center justify-between group cursor-pointer">
+                <div className="flex items-center gap-2">
+                  <Battery className="w-4 h-4 text-emerald-500" />
+                  <span className="text-sm font-medium text-gray-900">Storage at 84%</span>
+                </div>
+                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
